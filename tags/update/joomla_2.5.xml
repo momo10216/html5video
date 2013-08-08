@@ -1,0 +1,18 @@
+<update>
+   <name>HTML5V1deo plugin</name>
+   <description>HTML5V1deo plugin from Joomla 2.5</description>
+   <element>plg_html5video</element>
+   <type>plugin</type>
+   <version>2.5.1.0</version>
+   <infourl title="HTML5Video">http://joomlacode.org/gf/project/html5video</infourl>
+   <downloads>
+       <downloadurl type="full" format="zip">http://joomlacode.org/gf/project/html5video</downloadurl>
+   </downloads>
+   <tags>
+       <tag>stable</tag>
+   </tags>
+   <maintainer>Norbert Kuemin</maintainer>
+   <maintainerurl>http://kuem.in/en</maintainerurl>
+   
+   <targetplatform name="joomla" version="2.5"/>
+</update>
