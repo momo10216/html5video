@@ -1,7 +1,7 @@
 <update>
    <name>HTML5V1deo plugin</name>
    <description>HTML5V1deo plugin from Joomla 2.5</description>
-   <element>plg_html5video</element>
+   <element>plg_nok_html5video</element>
    <type>plugin</type>
    <version>2.5.1.0</version>
    <infourl title="HTML5Video">http://joomlacode.org/gf/project/html5video</infourl>
