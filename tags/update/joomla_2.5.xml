@@ -1,12 +1,12 @@
 <update>
-   <name>HTML5V1deo plugin</name>
-   <description>HTML5V1deo plugin from Joomla 2.5</description>
+   <name>HTML5Media plugin</name>
+   <description>HTML5Media plugin for Joomla 2.5</description>
    <element>plg_nok_html5video</element>
    <type>plugin</type>
-   <version>2.5.1.0</version>
-   <infourl title="HTML5Video">http://joomlacode.org/gf/project/html5video</infourl>
+   <version>2.5.2.0</version>
+   <infourl title="HTML5 Media">http://joomlacode.org/gf/project/html5video</infourl>
    <downloads>
-       <downloadurl type="full" format="zip">http://joomlacode.org/gf/download/frsrelease/18674/83768/plg_nok_html5video.zip</downloadurl>
+       <downloadurl type="full" format="zip">http://joomlacode.org/gf/download/frsrelease/18675/83769/plg_nok_html5video.zip</downloadurl>
    </downloads>
    <tags>
        <tag>stable</tag>
