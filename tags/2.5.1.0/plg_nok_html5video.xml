@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="2.5" method="upgrade" group="content">
+	<name>HTML5VIDEO_APP_NAME</name>
+	<author>Norbert Kuemin</author>
+	<creationDate>July 2013</creationDate>
+	<copyright>(C) 2013 Norbert Kuemin. All rights reserved.</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>momo_102@bluemail.ch</authorEmail>
+	<authorUrl>http://kuem.in/</authorUrl>
+	<version>2.5.1.0</version>
+	<description>HTML5VIDEO_APP_DESCRIPTION</description>
+	<files>
+		<filename plugin="plg_nok_html5video">plg_nok_html5video.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="de-DE">de-DE.plg_content_plg_nok_html5video.ini</language>
+		<language tag="de-DE">de-DE.plg_content_plg_nok_html5video.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_content_plg_nok_html5video.ini</language>
+		<language tag="en-GB">en-GB.plg_content_plg_nok_html5video.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="width" type="text" default="640" label="LABEL_WIDTH" description="DESC_WIDTH" size="3" />
+				<field name="height" type="text" default="264" label="LABEL_HEIGHT" description="DESC_HEIGHT" size="3" />
+				<field name="controls" type="radio" default="1" label="LABEL_CONTROLS" description="DESC_CONTROLS">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="autoplay" type="radio" default="0" label="LABEL_AUTOPLAY" description="DESC_AUTOPLAY">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="preload" type="list" default="0" label="LABEL_PRELOAD" description="DESC_PRELOAD">
+					<option value="auto">auto</option>
+					<option value="metadata">metadata</option>
+					<option value="none">JNO</option>
+				</field>
+				<field name="loop" type="radio" default="0" label="LABEL_LOOP" description="DESC_LOOP">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="poster_visibility" type="radio" default="1" label="LABEL_POSTER_VISIBILITY" description="DESC_POSTER_VISIBILITY">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="nocontextmenu" type="radio" default="0" label="LABEL_NO_CONTEXT_MENU" description="DESC_NO_CONTEXT_MENU">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" priority="2" name="Snowing Updates">http://joomlacode.org/gf/project/html5video/scmsvn/?action=browse&amp;path=%2F%2Acheckout%2A%2Ftags%2Fupdate%2Fjoomla_2.5.xml</server>
+	</updateservers>
+</extension>
