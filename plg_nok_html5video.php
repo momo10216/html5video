@@ -8,7 +8,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 jimport('joomla.plugin.plugin');
 
-class plgContentHtml5Video extends JPlugin {
+class plgContentplg_nok_html5video extends JPlugin {
 
 	var $noContextMenuElementIdList = array();
 
