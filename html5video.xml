@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="2.5" method="upgrade" group="content">
-	<name>html5video</name>
+	<name>plg_nok_html5video</name>
 	<author>Norbert Kuemin</author>
 	<creationDate>July 2013</creationDate>
 	<copyright>(C) 2013 Norbert Kuemin. All rights reserved.</copyright>
@@ -14,10 +14,10 @@
 		<filename>index.html</filename>
 	</files>
 	<languages folder="language">
-		<language tag="de-DE">de-DE.plg_content_html5video.ini</language>
-		<language tag="de-DE">de-DE.plg_content_html5video.sys.ini</language>
-		<language tag="en-GB">en-GB.plg_content_html5video.ini</language>
-		<language tag="en-GB">en-GB.plg_content_html5video.sys.ini</language>
+		<language tag="de-DE">de-DE.plg_nok_html5video.ini</language>
+		<language tag="de-DE">de-DE.plg_nok_html5video.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_nok_html5video.ini</language>
+		<language tag="en-GB">en-GB.plg_nok_html5video.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
