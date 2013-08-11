@@ -53,6 +53,6 @@
 		</fields>
 	</config>
 	<updateservers>
-		<server type="extension" priority="2" name="Snowing Updates">http://joomlacode.org/gf/project/html5video/scmsvn/?action=browse&amp;path=%2F%2Acheckout%2A%2Ftags%2Fupdate%2Fjoomla_2.5.xml</server>
+		<server type="extension" priority="1" name="HTML5 Media Updates">http://joomlacode.org/gf/project/html5video/scmsvn/?action=browse&amp;path=%2F%2Acheckout%2A%2Ftags%2Fupdate%2Fjoomla_2.5.xml</server>
 	</updateservers>
 </extension>
