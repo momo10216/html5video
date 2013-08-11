@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <updates>
 	<update>
-		<name>HTML5Media plugin</name>
-		<description>HTML5Media plugin for Joomla 2.5</description>
+		<name>HTML5 Media Updates</name>
+		<description>HTML5 Media plugin updates for Joomla 2.5</description>
 		<element>plg_nok_html5video</element>
 		<type>plugin</type>
 		<version>2.5.2.0</version>
