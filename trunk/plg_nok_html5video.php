@@ -28,7 +28,7 @@ class plgContentplg_nok_html5video extends JPlugin {
 				$pattern = str_replace(']', '\]', $pattern);
 				$pattern = str_replace('/', '\/', $pattern);
 				$pattern = str_replace('|', '\|', $pattern);
-		    		$article->text = preg_replace('/'.$pattern.'/', $html, $article->text, 1);
+				$article->text = preg_replace('/'.$pattern.'/', $html, $article->text, 1);
 			}
 		}
 		$hits_video = preg_match_all('#{html5video\s*(.*?)}#s', $article->text, $matches_video);
@@ -42,7 +42,7 @@ class plgContentplg_nok_html5video extends JPlugin {
 				$pattern = str_replace(']', '\]', $pattern);
 				$pattern = str_replace('/', '\/', $pattern);
 				$pattern = str_replace('|', '\|', $pattern);
-		    		$article->text = preg_replace('/'.$pattern.'/', $html, $article->text, 1);
+				$article->text = preg_replace('/'.$pattern.'/', $html, $article->text, 1);
 			}
 		}
 		if (count($this->noContextMenuElementIdList) > 0) {
@@ -62,6 +62,7 @@ class plgContentplg_nok_html5video extends JPlugin {
 		$entryParamsList['loop']		= $globalParams->get('loop');
 		$entryParamsList['poster_visibility']	= $globalParams->get('poster_visible');
 		$entryParamsList['nocontextmenu'] 	= $globalParams->get('nocontextmenu');
+		$entryParamsList['nosupport'] 	= $globalParams->get('nosupport');
 		$entryParamsList['audio_mp3']		= '';
 		$entryParamsList['audio_wav']		= '';
 		$entryParamsList['audio_ogg']		= '';
@@ -79,8 +80,10 @@ class plgContentplg_nok_html5video extends JPlugin {
 				$item	= explode('=[', $item);
 				$name 	= $item[0];
 				$value	= strtr($item[1], array('['=>'', ']'=>''));
-				if ($name == "text_track") {
+				if ($name == 'text_track') {
 					$entryParamsList[$name][] = $value;
+				} else if ($name == 'nosupport_'.$this->html5Common_getCurrentLanguageCode()) {
+					$entryParamsList['nosupport'] = $value;
 				} else {
 					$entryParamsList[$name] = $value;
 				}
@@ -134,14 +137,25 @@ class plgContentplg_nok_html5video extends JPlugin {
 	protected function html5Common_createInnerHTML($params) {
 		// Text tracks
 		$tracks	= $params['text_track'];
+		$spacing = '   ';
+		$text_inner_html = '';
 		if (!empty($tracks)) {
-			$text_track_html = '';
 			foreach ($tracks AS $track) {
 				$track_items = explode('|', $track);
-				$text_track_html .= '   <track kind="'.$track_items[0].'" src="'.$track_items[1].'" srclang="'.$track_items[2].'" label="'.$track_items[3].'" />'."\n";
+				$text_inner_html .= $spacing.'<track kind="'.$track_items[0].'" src="'.$track_items[1].'" srclang="'.$track_items[2].'" label="'.$track_items[3].'" />'."\n";
 			}
 		}
-		return $text_track_html;
+		if ($params['nosupport'] != '') {
+			$text_inner_html .= $spacing.$params['nosupport']."\n";
+		}
+		return $text_inner_html;
+	}
+
+	protected function html5Common_getCurrentLanguageCode() {
+		$lang = JFactory::getLanguage();
+		$tag = $lang->getTag();
+		$tag_items = explode('-', $tag);
+		return $tag_items[0];
 	}
 
 	protected function html5Common_addNoContextMenuElementId($params,$elementId) {
