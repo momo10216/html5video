@@ -5,6 +5,8 @@
 		<description>HTML5 Media plugin updates for Joomla 2.5</description>
 		<element>plg_nok_html5video</element>
 		<type>plugin</type>
+		<folder>content</folder>
+		<client_id>0</client_id>
 		<version>2.5.3.1</version>
 		<infourl title="HTML5 Media">http://joomlacode.org/gf/project/html5video</infourl>
 		<downloads>
@@ -15,6 +17,6 @@
 		</tags>
 		<maintainer>Norbert Kuemin</maintainer>
 		<maintainerurl>http://kuem.in/en</maintainerurl>
-		<targetplatform name="joomla" version="2.5"/>
+		<targetplatform name="joomla" version="2.5" />
 	</update>
 </updates>
