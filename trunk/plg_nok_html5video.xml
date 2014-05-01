@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="plugin" version="2.5" method="upgrade" group="content">
+<extension type="plugin" version="3.2" method="upgrade" group="content">
 	<name>HTML5VIDEO_APP_NAME</name>
 	<author>Norbert Kuemin</author>
 	<creationDate>July 2013</creationDate>
@@ -7,7 +7,7 @@
 	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>momo_102@bluemail.ch</authorEmail>
 	<authorUrl>http://kuem.in/</authorUrl>
-	<version>2.5.3.1</version>
+	<version>3.2.1</version>
 	<description>HTML5VIDEO_APP_DESCRIPTION</description>
 	<files>
 		<filename plugin="plg_nok_html5video">plg_nok_html5video.php</filename>
