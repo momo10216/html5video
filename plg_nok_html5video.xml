@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="3.2" method="upgrade" group="content">
-	<name>HTML5VIDEO_APP_NAME</name>
+	<name>PLG_NOK_HTML5VIDEO_APP_NAME</name>
 	<author>Norbert Kuemin</author>
 	<creationDate>July 2013</creationDate>
 	<copyright>(C) 2013 Norbert Kuemin. All rights reserved.</copyright>
@@ -8,7 +8,7 @@
 	<authorEmail>momo_102@bluemail.ch</authorEmail>
 	<authorUrl>http://kuem.in/</authorUrl>
 	<version>3.2.1</version>
-	<description>HTML5VIDEO_APP_DESCRIPTION</description>
+	<description>PLG_NOK_HTML5VIDEO_APP_DESC</description>
 	<files>
 		<filename plugin="plg_nok_html5video">plg_nok_html5video.php</filename>
 		<filename>index.html</filename>
@@ -22,38 +22,41 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="width" type="text" default="640" label="LABEL_WIDTH" description="DESC_WIDTH" size="3" />
-				<field name="height" type="text" default="264" label="LABEL_HEIGHT" description="DESC_HEIGHT" size="3" />
-				<field name="controls" type="radio" default="1" label="LABEL_CONTROLS" description="DESC_CONTROLS">
+				<field name="width" type="text" default="640" label="PLG_NOK_HTML5VIDEO_WIDTH_LABEL" description="PLG_NOK_HTML5VIDEO_WIDTH_DESC" size="3" />
+				<field name="height" type="text" default="264" label="PLG_NOK_HTML5VIDEO_HEIGHT_LABEL" description="PLG_NOK_HTML5VIDEO_HEIGHT_DESC" size="3" />
+				<field name="controls" type="radio" default="1" label="PLG_NOK_HTML5VIDEO_CONTROLS_LABEL" description="PLG_NOK_HTML5VIDEO_CONTROLS_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="autoplay" type="radio" default="0" label="LABEL_AUTOPLAY" description="DESC_AUTOPLAY">
+				<field name="autoplay" type="radio" default="0" label="PLG_NOK_HTML5VIDEO_AUTOPLAY_LABEL" description="PLG_NOK_HTML5VIDEO_AUTOPLAY_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="preload" type="list" default="0" label="LABEL_PRELOAD" description="DESC_PRELOAD">
+				<field name="preload" type="list" default="0" label="PLG_NOK_HTML5VIDEO_PRELOAD_LABEL" description="PLG_NOK_HTML5VIDEO_PRELOAD_DESC">
 					<option value="auto">auto</option>
 					<option value="metadata">metadata</option>
 					<option value="none">JNO</option>
 				</field>
-				<field name="loop" type="radio" default="0" label="LABEL_LOOP" description="DESC_LOOP">
+				<field name="loop" type="radio" default="0" label="PLG_NOK_HTML5VIDEO_LOOP_LABEL" description="PLG_NOK_HTML5VIDEO_LOOP_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="poster_visibility" type="radio" default="1" label="LABEL_POSTER_VISIBILITY" description="DESC_POSTER_VISIBILITY">
+				<field name="poster_visibility" type="radio" default="1" label="PLG_NOK_HTML5VIDEO_POSTER_VISIBILITY_LABEL"
+					description="PLG_NOK_HTML5VIDEO_POSTER_VISIBILITY_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="nocontextmenu" type="radio" default="0" label="LABEL_NO_CONTEXT_MENU" description="DESC_NO_CONTEXT_MENU">
+				<field name="nocontextmenu" type="radio" default="0" label="PLG_NOK_HTML5VIDEO_NO_CONTEXT_MENU_LABEL"
+					description="PLG_NOK_HTML5VIDEO_NO_CONTEXT_MENU_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="nosupport" type="text" default="Your browser does not support HTML5 audio + video." label="LABEL_NO_SUPPORT" description="DESC_NO_SUPPORT" size="70" />
+				<field name="nosupport" type="text" default="Your browser does not support HTML5 audio + video." label="PLG_NOK_HTML5VIDEO_NO_SUPPORT_LABEL"
+					description="PLG_NOK_HTML5VIDEO_NO_SUPPORT_DESC" size="70" />
 			</fieldset>
 		</fields>
 	</config>
 	<updateservers>
-		<server type="extension" priority="1" name="HTML5 Media Updates">http://joomlacode.org/gf/project/html5video/scmsvn/?action=browse&amp;path=%2F%2Acheckout%2A%2Ftags%2Fupdate%2Fjoomla_2.5.xml</server>
+		<server type="extension" priority="2" name="HTML5 Media Updates">http://kuem.in/joomlaupdate/plg_nok_html5video.xml</server>
 	</updateservers>
 </extension>

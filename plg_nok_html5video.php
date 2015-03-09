@@ -54,24 +54,24 @@ class plgContentplg_nok_html5video extends JPlugin {
 	protected function html5Common_getParams($globalParams, $entryParamsText) {
 
 		// Initialize with the global paramteres
-		$entryParamsList['width'] 		= $globalParams->get('width');
-		$entryParamsList['height'] 		= $globalParams->get('height');
-		$entryParamsList['controls']		= $globalParams->get('controls');
-		$entryParamsList['autoplay']		= $globalParams->get('autoplay');
-		$entryParamsList['preload']		= $globalParams->get('preload');
-		$entryParamsList['loop']		= $globalParams->get('loop');
-		$entryParamsList['poster_visibility']	= $globalParams->get('poster_visible');
-		$entryParamsList['nocontextmenu'] 	= $globalParams->get('nocontextmenu');
-		$entryParamsList['nosupport'] 	= $globalParams->get('nosupport');
-		$entryParamsList['audio_mp3']		= '';
-		$entryParamsList['audio_wav']		= '';
-		$entryParamsList['audio_ogg']		= '';
-		$entryParamsList['audio_aac']		= '';
-		$entryParamsList['video_mp4']		= '';
-		$entryParamsList['video_webm']		= '';
-		$entryParamsList['video_ogg']		= '';
-		$entryParamsList['poster']		= '';
-		$entryParamsList['text_track']		= '';
+		$entryParamsList['width'] = $globalParams->get('width');
+		$entryParamsList['height'] = $globalParams->get('height');
+		$entryParamsList['controls'] = $globalParams->get('controls');
+		$entryParamsList['autoplay'] = $globalParams->get('autoplay');
+		$entryParamsList['preload'] = $globalParams->get('preload');
+		$entryParamsList['loop'] = $globalParams->get('loop');
+		$entryParamsList['poster_visibility'] = $globalParams->get('poster_visible');
+		$entryParamsList['nocontextmenu'] = $globalParams->get('nocontextmenu');
+		$entryParamsList['nosupport'] = $globalParams->get('nosupport');
+		$entryParamsList['audio_mp3'] = '';
+		$entryParamsList['audio_wav'] = '';
+		$entryParamsList['audio_ogg'] = '';
+		$entryParamsList['audio_aac'] = '';
+		$entryParamsList['video_mp4'] = '';
+		$entryParamsList['video_webm'] = '';
+		$entryParamsList['video_ogg'] = '';
+		$entryParamsList['poster'] = '';
+		$entryParamsList['text_track'] = '';
 
 		// Overwrite with the local paramteres
 		$items = explode('] ', $entryParamsText);
