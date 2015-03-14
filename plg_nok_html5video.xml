@@ -2,12 +2,12 @@
 <extension type="plugin" version="3.2" method="upgrade" group="content">
 	<name>PLG_NOK_HTML5VIDEO_APP_NAME</name>
 	<author>Norbert Kuemin</author>
-	<creationDate>July 2013</creationDate>
-	<copyright>(C) 2013 Norbert Kuemin. All rights reserved.</copyright>
+	<creationDate>March 2015</creationDate>
+	<copyright>(C) 2015 Norbert Kuemin. All rights reserved.</copyright>
 	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>momo_102@bluemail.ch</authorEmail>
 	<authorUrl>http://kuem.in/</authorUrl>
-	<version>3.2.1</version>
+	<version>3.2.2</version>
 	<description>PLG_NOK_HTML5VIDEO_APP_DESC</description>
 	<files>
 		<filename plugin="plg_nok_html5video">plg_nok_html5video.php</filename>
