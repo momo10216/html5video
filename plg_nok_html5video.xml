@@ -7,7 +7,7 @@
 	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
 	<authorEmail>momo_102@bluemail.ch</authorEmail>
 	<authorUrl>http://kuem.in/</authorUrl>
-	<version>3.2.3</version>
+	<version>3.2.4</version>
 	<description>PLG_NOK_HTML5VIDEO_APP_DESC</description>
 	<files>
 		<filename plugin="plg_nok_html5video">plg_nok_html5video.php</filename>
