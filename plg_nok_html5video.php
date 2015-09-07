@@ -167,8 +167,27 @@ class plgContentplg_nok_html5video extends JPlugin {
 	protected function html5Audio_createHTML($id, $params) {
 		$elementId = "html5Audio_".$id;
 		$html = '';
+		$style = '';
 		$html .= "\n".'<audio id="'.$elementId.'" class="html5audio"';
 		$html .= $this->html5Common_createAttributeHTML($params);
+		// Width
+		$width = $params['width'];
+		if (!empty($width)) {
+			$style .= ' width: '.$width.'px;';
+		}
+		// Height
+		$height = $params['height'];
+		if (!empty($width)) {
+			$style .= ' height: '.$height.'px;';
+		}
+		// Poster image
+		$poster	= $params['poster'];
+		if ($params['poster_visibility'] == "1" && $poster != "") {
+			$style .= ' background-image: url(\''.$poster.'\');';
+		}
+		if (!empty($style)) {
+			$html .= ' style="'.$style.'"';
+		}
 		$html .= ">\n";
 		// Add audio sources
 		$audio_mp3 = $params['audio_mp3'];
@@ -209,7 +228,7 @@ class plgContentplg_nok_html5video extends JPlugin {
 		}
 		// Poster image
 		$poster	= $params['poster'];
-		if ($params['poster_visibility'] == "1" && $poster != "") {
+		if ($params['poster_visibility'] == "1" && !empty($poster)) {
 			$html .= ' poster="'.$poster.'"';
 		}
 		$html .= $this->html5Common_createAttributeHTML($params);
