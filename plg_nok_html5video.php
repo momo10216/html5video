@@ -60,7 +60,7 @@ class plgContentplg_nok_html5video extends JPlugin {
 		$entryParamsList['autoplay'] = $globalParams->get('autoplay');
 		$entryParamsList['preload'] = $globalParams->get('preload');
 		$entryParamsList['loop'] = $globalParams->get('loop');
-		$entryParamsList['poster_visibility'] = $globalParams->get('poster_visible');
+		$entryParamsList['poster_visibility'] = $globalParams->get('poster_visibility');
 		$entryParamsList['nocontextmenu'] = $globalParams->get('nocontextmenu');
 		$entryParamsList['nosupport'] = $globalParams->get('nosupport');
 		$entryParamsList['audio_mp3'] = '';
