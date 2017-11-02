@@ -72,6 +72,8 @@ class plgContentplg_nok_html5video extends JPlugin {
 		$entryParamsList['video_ogg'] = '';
 		$entryParamsList['poster'] = '';
 		$entryParamsList['text_track'] = '';
+		$entryParamsList['class'] = '';
+		$entryParamsList['id'] = '';
 
 		// Overwrite with the local paramteres
 		$items = explode('] ', $entryParamsText);
@@ -165,10 +167,13 @@ class plgContentplg_nok_html5video extends JPlugin {
 	}
 
 	protected function html5Audio_createHTML($id, $params) {
-		$elementId = "html5Audio_".$id;
+		$class = 'html5audio';
+		if (!empty($params['class'])) { $class = $params['class']; }
+		$elementId = $class.'_'.$id;
+		if (!empty($params['id'])) { $elementId = $params['id']; }
 		$html = '';
 		$style = '';
-		$html .= "\n".'<audio id="'.$elementId.'" class="html5audio"';
+		$html .= "\n".'<audio id="'.$elementId.'" class="'.$class.'"';
 		$html .= $this->html5Common_createAttributeHTML($params);
 		// Width
 		$width = $params['width'];
@@ -213,9 +218,12 @@ class plgContentplg_nok_html5video extends JPlugin {
 	}
 	
 	protected function html5Video_createHTML($id, $params) {
-		$elementId = "html5video_".$id;
+		$class = 'html5video';
+		if (!empty($params['class'])) { $class = $params['class']; }
+		$elementId = $class.'_'.$id;
+		if (!empty($params['id'])) { $elementId = $params['id']; }
 		$html = '';
-		$html .= "\n".'<video id="'.$elementId.'" class="html5video"';
+		$html .= "\n".'<video id="'.$elementId.'" class="'.$class.'"';
 		// Width
 		$width = $params['width'];
 		if (!empty($width)) {
