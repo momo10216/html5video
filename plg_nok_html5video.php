@@ -58,6 +58,7 @@ class plgContentplg_nok_html5video extends JPlugin {
 		$entryParamsList['height'] = $globalParams->get('height');
 		$entryParamsList['controls'] = $globalParams->get('controls');
 		$entryParamsList['autoplay'] = $globalParams->get('autoplay');
+		$entryParamsList['muted'] = $globalParams->get('muted');
 		$entryParamsList['preload'] = $globalParams->get('preload');
 		$entryParamsList['loop'] = $globalParams->get('loop');
 		$entryParamsList['poster_visibility'] = $globalParams->get('poster_visibility');
@@ -91,6 +92,9 @@ class plgContentplg_nok_html5video extends JPlugin {
 				}
 			}
 		}
+		if ($entryParamsList['autoplay'] == '1') {
+			$entryParamsList['muted'] = '1';
+		}
 		return $entryParamsList;
 	}
 
@@ -117,12 +121,16 @@ class plgContentplg_nok_html5video extends JPlugin {
 	protected function html5Common_createAttributeHTML($params) {
 		$html = '';
 		// Controls
-		if ($params['controls'] == "1") {
+		if ($params['controls'] == '1') {
 			$html .= ' controls="controls"';
 		}
 		// Autoplay
-		if ($params['autoplay'] == "1") {
+		if ($params['autoplay'] == '1') {
 			$html .= ' autoplay="autoplay"';
+		}
+		// Autoplay
+		if ($params['muted'] == '1') {
+			$html .= ' muted="muted"';
 		}
 		// Preload
 		$preload = $params['preload'];
@@ -130,7 +138,7 @@ class plgContentplg_nok_html5video extends JPlugin {
 			$html .= ' preload="'.$preload.'"';
 		}
 		// Loop
-		if ($params['loop'] == "1") {
+		if ($params['loop'] == '1') {
 			$html .= ' loop="loop"';
 		}
 		return $html;
